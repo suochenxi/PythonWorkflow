@@ -1,4 +1,13 @@
+import rpa as r
 import os
 
-# 调用 AppleScript 运行并激活阿里郎客户端
-os.system('osascript ./Resources/script/runAlilang.scpt')
+r.init(visual_automation = True, chrome_browser = False,turbo_mode = True)
+
+os.system('open /Applications/AliLang.app')
+
+r.click('./Resources/Network.png')
+r.click('./Resources/Acceleration.png')
+r.click('./Resources/TurnOn.png')
+r.click('./Resources/Agree.png')
+
+r.close()
